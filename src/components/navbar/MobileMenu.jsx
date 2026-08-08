@@ -5,11 +5,13 @@ import Link from "next/link";
 import { X } from "lucide-react";
 
 const navItems = [
-  { name: "About", href: "#about" },
+   { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
   { name: "Research", href: "#research" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
+
 ];
 
 export default function MobileMenu({ open, setOpen }) {
@@ -70,7 +72,8 @@ export default function MobileMenu({ open, setOpen }) {
 
             <div className="mt-8 border-t border-white/10 pt-8">
               <Link
-                href="/cv.pdf"
+             href="/Md_Fahim_Muntasir_Resume.pdf"
+               download="Md_Fahim_Muntasir_Resume.pdf"
                 onClick={() => setOpen(false)}
                 className="flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#050816] transition hover:bg-cyan-300"
               >

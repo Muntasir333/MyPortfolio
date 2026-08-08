@@ -83,23 +83,9 @@ export default function Hero() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-400" />
               </span>
 
-              Biotechnology & Genetic Engineering
+              Biotechnologist & Full-Stack Web Developer
             </motion.div>
-            <> </>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-3 py-2 text-[10px] font-medium text-cyan-300 sm:px-4 sm:text-xs"
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-50" />
-
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-400" />
-              </span>
-
-              Full-Stack Web Developer
-            </motion.div>
+         
 
             {/* Heading */}
 
