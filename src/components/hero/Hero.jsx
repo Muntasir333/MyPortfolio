@@ -46,11 +46,11 @@ export default function Hero() {
       {/* ================= BACKGROUND ================= */}
 
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-0 h-[350px] w-[350px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[120px] sm:h-[500px] sm:w-[500px]" />
+        <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[100px] sm:h-[500px] sm:w-[500px] sm:blur-[120px]" />
 
-        <div className="absolute right-0 top-1/3 h-[300px] w-[300px] rounded-full bg-violet-500/10 blur-[120px] sm:h-[400px] sm:w-[400px]" />
+        <div className="absolute right-0 top-1/3 h-[250px] w-[250px] rounded-full bg-violet-500/10 blur-[100px] sm:h-[400px] sm:w-[400px] sm:blur-[120px]" />
 
-        <div className="absolute bottom-0 left-0 h-[250px] w-[250px] rounded-full bg-blue-500/5 blur-[100px]" />
+        <div className="absolute bottom-0 left-0 h-[200px] w-[200px] rounded-full bg-blue-500/5 blur-[80px] sm:h-[250px] sm:w-[250px] sm:blur-[100px]" />
       </div>
 
       {/* Background grid */}
@@ -58,7 +58,21 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:linear-gradient(to_bottom,black_0%,transparent_90%)]" />
 
       <Container className="relative">
-        <div className="flex min-h-[calc(100vh-80px)] flex-col justify-center py-12 sm:py-16 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-12 lg:py-20">
+        <div
+          className="
+            flex
+            min-h-[calc(100vh-80px)]
+            flex-col
+            justify-start
+            py-8
+            sm:py-16
+            lg:grid
+            lg:grid-cols-[1.1fr_0.9fr]
+            lg:items-center
+            lg:gap-12
+            lg:py-20
+          "
+        >
           {/* ================================================= */}
           {/* LEFT CONTENT */}
           {/* ================================================= */}
@@ -75,7 +89,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-3 py-2 text-[10px] font-medium text-cyan-300 sm:px-4 sm:text-xs"
+              className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-3 py-2 text-[9px] font-medium text-cyan-300 sm:mb-6 sm:px-4 sm:text-xs"
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-50" />
@@ -85,11 +99,10 @@ export default function Hero() {
 
               Biotechnologist & Full-Stack Web Developer
             </motion.div>
-         
 
             {/* Heading */}
 
-            <h1 className="max-w-4xl text-[42px] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-[80px]">
+            <h1 className="max-w-4xl text-[40px] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-[80px]">
               Biotechnologist.
               <br />
 
@@ -104,7 +117,7 @@ export default function Hero() {
 
             {/* Description */}
 
-            <p className="mt-6 max-w-2xl text-sm leading-6 text-slate-400 sm:text-lg sm:leading-7">
+            <p className="mt-5 max-w-2xl text-[11px] leading-5 text-slate-400 sm:mt-6 sm:text-lg sm:leading-7">
               I explore biology through{" "}
               <span className="text-slate-200">
                 microbiology, genomics and bioinformatics
@@ -117,7 +130,7 @@ export default function Hero() {
 
             {/* Buttons */}
 
-            <div className="mt-7 flex flex-wrap gap-3 sm:mt-9">
+            <div className="mt-6 flex flex-wrap gap-3 sm:mt-9">
               <Button href="#projects">
                 Explore My Work
                 <FaArrowUpRightFromSquare className="ml-2 text-xs" />
@@ -130,14 +143,14 @@ export default function Hero() {
 
             {/* Social Links */}
 
-            <div className="mt-7 flex items-center gap-5">
+            <div className="mt-6 flex items-center gap-5 sm:mt-7">
               <Link
                 href="https://github.com/Muntasir333"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-xs text-slate-500 transition hover:text-white sm:text-sm"
+                className="flex items-center gap-2 text-[10px] text-slate-500 transition hover:text-white sm:text-sm"
               >
-                <FaGithub size={15} />
+                <FaGithub size={13} />
                 GitHub
               </Link>
 
@@ -145,9 +158,9 @@ export default function Hero() {
                 href="https://linkedin.com/in/md-fahim-muntasir"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-xs text-slate-500 transition hover:text-white sm:text-sm"
+                className="flex items-center gap-2 text-[10px] text-slate-500 transition hover:text-white sm:text-sm"
               >
-                <FaLinkedin size={15} />
+                <FaLinkedin size={13} />
                 LinkedIn
               </Link>
             </div>
@@ -161,15 +174,69 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.25, duration: 0.8 }}
-            className="relative mx-auto mt-14 h-[330px] w-full max-w-[330px] sm:h-[450px] sm:max-w-[450px] lg:mt-0 lg:h-[560px] lg:max-w-[560px]"
+            className="
+              relative
+              mx-auto
+              mt-28
+              h-[250px]
+              w-full
+              max-w-[250px]
+              sm:mt-20
+              sm:h-[400px]
+              sm:max-w-[400px]
+              lg:mt-0
+              lg:h-[560px]
+              lg:max-w-[560px]
+            "
           >
-            {/* Outer circle */}
+            {/* ================================================= */}
+            {/* OUTER CIRCLE */}
+            {/* ================================================= */}
 
-            <div className="absolute left-1/2 top-1/2 h-[260px] w-[260px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/10 bg-cyan-400/[0.02] shadow-[0_0_80px_rgba(34,211,238,0.08)] sm:h-[340px] sm:w-[340px] lg:h-[360px] lg:w-[360px]" />
+            <div
+              className="
+                absolute
+                left-1/2
+                top-1/2
+                h-[205px]
+                w-[205px]
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-full
+                border
+                border-cyan-400/10
+                bg-cyan-400/[0.02]
+                shadow-[0_0_60px_rgba(34,211,238,0.08)]
+                sm:h-[300px]
+                sm:w-[300px]
+                lg:h-[360px]
+                lg:w-[360px]
+                lg:shadow-[0_0_80px_rgba(34,211,238,0.08)]
+              "
+            />
 
-            {/* Inner circle */}
+            {/* ================================================= */}
+            {/* INNER CIRCLE */}
+            {/* ================================================= */}
 
-            <div className="absolute left-1/2 top-1/2 h-[200px] w-[200px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-400/10 sm:h-[270px] sm:w-[270px]" />
+            <div
+              className="
+                absolute
+                left-1/2
+                top-1/2
+                h-[160px]
+                w-[160px]
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-full
+                border
+                border-blue-400/10
+                sm:h-[235px]
+                sm:w-[235px]
+                lg:h-[270px]
+                lg:w-[270px]
+              "
+            />
 
             {/* ================================================= */}
             {/* PROFILE IMAGE */}
@@ -177,34 +244,76 @@ export default function Hero() {
 
             <motion.div
               animate={{
-                y: [0, -8, 0],
+                y: [0, -6, 0],
               }}
               transition={{
                 duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute left-1/2 top-1/2 z-10 h-[150px] w-[150px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border border-cyan-300/20 bg-[#08101f] shadow-[0_0_50px_rgba(34,211,238,0.12)] sm:h-[190px] sm:w-[190px] lg:h-[220px] lg:w-[220px]"
+              className="
+                absolute
+                left-1/2
+                top-1/2
+                z-10
+                h-[120px]
+                w-[120px]
+                -translate-x-1/2
+                -translate-y-1/2
+                overflow-hidden
+                rounded-full
+                border
+                border-cyan-300/20
+                bg-[#08101f]
+                shadow-[0_0_40px_rgba(34,211,238,0.12)]
+                sm:h-[170px]
+                sm:w-[170px]
+                lg:h-[220px]
+                lg:w-[220px]
+                lg:shadow-[0_0_50px_rgba(34,211,238,0.12)]
+              "
             >
               <Image
                 src="/images/profile.jpeg"
                 alt="Md. Fahim Muntasir"
                 fill
                 priority
-                sizes="220px"
+                sizes="(max-width: 640px) 120px, (max-width: 1024px) 170px, 220px"
                 className="object-cover"
               />
 
-              {/* subtle image overlay */}
+              {/* Subtle image overlay */}
 
               <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-t from-[#060b16]/20 via-transparent to-cyan-300/5" />
             </motion.div>
 
-            {/* Profile ring */}
+            {/* ================================================= */}
+            {/* PROFILE RING */}
+            {/* ================================================= */}
 
-            <div className="absolute left-1/2 top-1/2 z-[5] h-[170px] w-[170px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/10 sm:h-[215px] sm:w-[215px] lg:h-[245px] lg:w-[245px]" />
+            <div
+              className="
+                absolute
+                left-1/2
+                top-1/2
+                z-[5]
+                h-[140px]
+                w-[140px]
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-full
+                border
+                border-cyan-400/10
+                sm:h-[195px]
+                sm:w-[195px]
+                lg:h-[245px]
+                lg:w-[245px]
+              "
+            />
 
-            {/* Orbit */}
+            {/* ================================================= */}
+            {/* ORBIT */}
+            {/* ================================================= */}
 
             <motion.div
               animate={{
@@ -215,28 +324,42 @@ export default function Hero() {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className="absolute inset-[45px] rounded-full border border-dashed border-cyan-400/10 sm:inset-[65px]"
+              className="
+                absolute
+                inset-[35px]
+                rounded-full
+                border
+                border-dashed
+                border-cyan-400/10
+                sm:inset-[55px]
+                lg:inset-[100px]
+              "
             >
               {/* Flask */}
 
-              <div className="absolute -left-4 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg border border-cyan-400/20 bg-[#08101f] text-cyan-300 shadow-lg sm:-left-5 sm:h-10 sm:w-10 sm:rounded-xl">
-                <FaFlask size={14} />
+              <div className="absolute -left-3 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-lg border border-cyan-400/20 bg-[#08101f] text-cyan-300 shadow-lg sm:-left-5 sm:h-10 sm:w-10 sm:rounded-xl">
+                <FaFlask size={12} className="sm:hidden" />
+                <FaFlask size={14} className="hidden sm:block" />
               </div>
 
               {/* Code */}
 
-              <div className="absolute -right-4 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg border border-blue-400/20 bg-[#08101f] text-blue-300 shadow-lg sm:-right-5 sm:h-10 sm:w-10 sm:rounded-xl">
-                <FaCode size={14} />
+              <div className="absolute -right-3 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-lg border border-blue-400/20 bg-[#08101f] text-blue-300 shadow-lg sm:-right-5 sm:h-10 sm:w-10 sm:rounded-xl">
+                <FaCode size={12} className="sm:hidden" />
+                <FaCode size={14} className="hidden sm:block" />
               </div>
 
               {/* Microscope */}
 
-              <div className="absolute -top-4 left-1/2 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-lg border border-violet-400/20 bg-[#08101f] text-violet-300 shadow-lg sm:-top-5 sm:h-10 sm:w-10 sm:rounded-xl">
-                <FaMicroscope size={14} />
+              <div className="absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-lg border border-violet-400/20 bg-[#08101f] text-violet-300 shadow-lg sm:-top-5 sm:h-10 sm:w-10 sm:rounded-xl">
+                <FaMicroscope size={12} className="sm:hidden" />
+                <FaMicroscope size={14} className="hidden sm:block" />
               </div>
             </motion.div>
 
-            {/* Floating cards */}
+            {/* ================================================= */}
+            {/* FLOATING CARDS */}
+            {/* ================================================= */}
 
             {floatingCards.map((card, index) => {
               const Icon = card.icon;
@@ -282,16 +405,20 @@ export default function Hero() {
               );
             })}
 
-            {/* Decorative dots */}
+            {/* ================================================= */}
+            {/* DECORATIVE DOTS */}
+            {/* ================================================= */}
 
-            <div className="absolute left-10 top-10 h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.8)] sm:left-16 sm:top-16 sm:h-2 sm:w-2" />
+            <div className="absolute left-5 top-5 h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.8)] sm:left-16 sm:top-16 sm:h-2 sm:w-2" />
 
-            <div className="absolute bottom-10 right-10 h-1.5 w-1.5 rounded-full bg-violet-300 shadow-[0_0_12px_rgba(196,181,253,0.8)] sm:bottom-20 sm:right-20 sm:h-2 sm:w-2" />
+            <div className="absolute bottom-5 right-5 h-1.5 w-1.5 rounded-full bg-violet-300 shadow-[0_0_12px_rgba(196,181,253,0.8)] sm:bottom-20 sm:right-20 sm:h-2 sm:w-2" />
           </motion.div>
         </div>
       </Container>
 
-      {/* Scroll indicator */}
+      {/* ================================================= */}
+      {/* SCROLL INDICATOR */}
+      {/* ================================================= */}
 
       <motion.a
         href="#about"
