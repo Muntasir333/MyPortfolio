@@ -41,32 +41,34 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden bg-[#060b16] text-white"
+      className="relative isolate w-full overflow-hidden"
     >
       {/* ================= BACKGROUND ================= */}
 
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[100px] sm:h-[500px] sm:w-[500px] sm:blur-[120px]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute left-1/2 top-0 h-[260px] w-[260px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[90px] sm:h-[500px] sm:w-[500px] sm:blur-[120px]" />
 
-        <div className="absolute right-0 top-1/3 h-[250px] w-[250px] rounded-full bg-violet-500/10 blur-[100px] sm:h-[400px] sm:w-[400px] sm:blur-[120px]" />
+        <div className="absolute -right-20 top-1/3 h-[220px] w-[220px] rounded-full bg-violet-500/10 blur-[90px] sm:right-0 sm:h-[400px] sm:w-[400px] sm:blur-[120px]" />
 
-        <div className="absolute bottom-0 left-0 h-[200px] w-[200px] rounded-full bg-blue-500/5 blur-[80px] sm:h-[250px] sm:w-[250px] sm:blur-[100px]" />
+        <div className="absolute -bottom-20 -left-20 h-[180px] w-[180px] rounded-full bg-blue-500/5 blur-[70px] sm:bottom-0 sm:left-0 sm:h-[250px] sm:w-[250px] sm:blur-[100px]" />
       </div>
 
-      {/* Background grid */}
+      {/* Background Grid */}
 
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:linear-gradient(to_bottom,black_0%,transparent_90%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:linear-gradient(to_bottom,black_0%,transparent_90%)]" />
 
       <Container className="relative">
         <div
           className="
             flex
-            min-h-[calc(100vh-80px)]
+            min-h-[calc(100svh-80px)]
+            w-full
             flex-col
-            justify-start
-            py-8
+            justify-center
+            py-10
             sm:py-16
             lg:grid
+            lg:min-h-[calc(100vh-80px)]
             lg:grid-cols-[1.1fr_0.9fr]
             lg:items-center
             lg:gap-12
@@ -81,7 +83,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="w-full"
+            className="w-full min-w-0"
           >
             {/* Badge */}
 
@@ -89,20 +91,52 @@ export default function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-3 py-2 text-[9px] font-medium text-cyan-300 sm:mb-6 sm:px-4 sm:text-xs"
+              className="
+                mb-5
+                inline-flex
+                max-w-full
+                items-center
+                gap-2
+                rounded-full
+                border
+                border-cyan-400/20
+                bg-cyan-400/5
+                px-3
+                py-2
+                text-[9px]
+                font-medium
+                text-cyan-300
+                sm:mb-6
+                sm:px-4
+                sm:text-xs
+              "
             >
-              <span className="relative flex h-2 w-2">
+              <span className="relative flex h-2 w-2 shrink-0">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-50" />
 
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-400" />
               </span>
 
-              Biotechnologist & Full-Stack Web Developer
+              <span className="truncate">
+                Biotechnologist & Full-Stack Web Developer
+              </span>
             </motion.div>
 
             {/* Heading */}
 
-            <h1 className="max-w-4xl text-[40px] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-[80px]">
+            <h1
+              className="
+                max-w-4xl
+                text-[40px]
+                font-bold
+                leading-[1.04]
+                tracking-tight
+                text-white
+                sm:text-6xl
+                lg:text-7xl
+                xl:text-[80px]
+              "
+            >
               Biotechnologist.
               <br />
 
@@ -117,7 +151,18 @@ export default function Hero() {
 
             {/* Description */}
 
-            <p className="mt-5 max-w-2xl text-[11px] leading-5 text-slate-400 sm:mt-6 sm:text-lg sm:leading-7">
+            <p
+              className="
+                mt-5
+                max-w-2xl
+                text-[11px]
+                leading-5
+                text-slate-400
+                sm:mt-6
+                sm:text-lg
+                sm:leading-7
+              "
+            >
               I explore biology through{" "}
               <span className="text-slate-200">
                 microbiology, genomics and bioinformatics
@@ -177,16 +222,17 @@ export default function Hero() {
             className="
               relative
               mx-auto
-              mt-28
-              h-[250px]
-              w-full
-              max-w-[250px]
+              mt-12
+              h-[270px]
+              w-[270px]
+              shrink-0
               sm:mt-20
               sm:h-[400px]
-              sm:max-w-[400px]
+              sm:w-[400px]
               lg:mt-0
               lg:h-[560px]
-              lg:max-w-[560px]
+              lg:w-[560px]
+              lg:max-w-full
             "
           >
             {/* ================================================= */}
@@ -198,8 +244,8 @@ export default function Hero() {
                 absolute
                 left-1/2
                 top-1/2
-                h-[205px]
-                w-[205px]
+                h-[215px]
+                w-[215px]
                 -translate-x-1/2
                 -translate-y-1/2
                 rounded-full
@@ -224,8 +270,8 @@ export default function Hero() {
                 absolute
                 left-1/2
                 top-1/2
-                h-[160px]
-                w-[160px]
+                h-[165px]
+                w-[165px]
                 -translate-x-1/2
                 -translate-y-1/2
                 rounded-full
@@ -239,13 +285,142 @@ export default function Hero() {
             />
 
             {/* ================================================= */}
+            {/* ORBIT */}
+            {/* ================================================= */}
+
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 25,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="
+                absolute
+                inset-[45px]
+                rounded-full
+                border
+                border-dashed
+                border-cyan-400/10
+                sm:inset-[55px]
+                lg:inset-[100px]
+              "
+            >
+              {/* Flask */}
+
+              <div
+                className="
+                  absolute
+                  -left-3
+                  top-1/2
+                  flex
+                  h-7
+                  w-7
+                  -translate-y-1/2
+                  items-center
+                  justify-center
+                  rounded-lg
+                  border
+                  border-cyan-400/20
+                  bg-[#08101f]
+                  text-cyan-300
+                  shadow-lg
+                  sm:-left-5
+                  sm:h-10
+                  sm:w-10
+                  sm:rounded-xl
+                "
+              >
+                <FaFlask size={12} />
+              </div>
+
+              {/* Code */}
+
+              <div
+                className="
+                  absolute
+                  -right-3
+                  top-1/2
+                  flex
+                  h-7
+                  w-7
+                  -translate-y-1/2
+                  items-center
+                  justify-center
+                  rounded-lg
+                  border
+                  border-blue-400/20
+                  bg-[#08101f]
+                  text-blue-300
+                  shadow-lg
+                  sm:-right-5
+                  sm:h-10
+                  sm:w-10
+                  sm:rounded-xl
+                "
+              >
+                <FaCode size={12} />
+              </div>
+
+              {/* Microscope */}
+
+              <div
+                className="
+                  absolute
+                  -top-3
+                  left-1/2
+                  flex
+                  h-7
+                  w-7
+                  -translate-x-1/2
+                  items-center
+                  justify-center
+                  rounded-lg
+                  border
+                  border-violet-400/20
+                  bg-[#08101f]
+                  text-violet-300
+                  shadow-lg
+                  sm:-top-5
+                  sm:h-10
+                  sm:w-10
+                  sm:rounded-xl
+                "
+              >
+                <FaMicroscope size={12} />
+              </div>
+            </motion.div>
+
+            {/* ================================================= */}
+            {/* PROFILE RING */}
+            {/* ================================================= */}
+
+            <div
+              className="
+                absolute
+                left-1/2
+                top-1/2
+                z-[5]
+                h-[145px]
+                w-[145px]
+                -translate-x-1/2
+                -translate-y-1/2
+                rounded-full
+                border
+                border-cyan-400/10
+                sm:h-[195px]
+                sm:w-[195px]
+                lg:h-[245px]
+                lg:w-[245px]
+              "
+            />
+
+            {/* ================================================= */}
             {/* PROFILE IMAGE */}
             {/* ================================================= */}
 
             <motion.div
-              animate={{
-                y: [0, -6, 0],
-              }}
+              animate={{ y: [0, -6, 0] }}
               transition={{
                 duration: 5,
                 repeat: Infinity,
@@ -256,8 +431,8 @@ export default function Hero() {
                 left-1/2
                 top-1/2
                 z-10
-                h-[120px]
-                w-[120px]
+                h-[125px]
+                w-[125px]
                 -translate-x-1/2
                 -translate-y-1/2
                 overflow-hidden
@@ -278,83 +453,11 @@ export default function Hero() {
                 alt="Md. Fahim Muntasir"
                 fill
                 priority
-                sizes="(max-width: 640px) 120px, (max-width: 1024px) 170px, 220px"
+                sizes="125px"
                 className="object-cover"
               />
 
-              {/* Subtle image overlay */}
-
               <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-t from-[#060b16]/20 via-transparent to-cyan-300/5" />
-            </motion.div>
-
-            {/* ================================================= */}
-            {/* PROFILE RING */}
-            {/* ================================================= */}
-
-            <div
-              className="
-                absolute
-                left-1/2
-                top-1/2
-                z-[5]
-                h-[140px]
-                w-[140px]
-                -translate-x-1/2
-                -translate-y-1/2
-                rounded-full
-                border
-                border-cyan-400/10
-                sm:h-[195px]
-                sm:w-[195px]
-                lg:h-[245px]
-                lg:w-[245px]
-              "
-            />
-
-            {/* ================================================= */}
-            {/* ORBIT */}
-            {/* ================================================= */}
-
-            <motion.div
-              animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 25,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="
-                absolute
-                inset-[35px]
-                rounded-full
-                border
-                border-dashed
-                border-cyan-400/10
-                sm:inset-[55px]
-                lg:inset-[100px]
-              "
-            >
-              {/* Flask */}
-
-              <div className="absolute -left-3 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-lg border border-cyan-400/20 bg-[#08101f] text-cyan-300 shadow-lg sm:-left-5 sm:h-10 sm:w-10 sm:rounded-xl">
-                <FaFlask size={12} className="sm:hidden" />
-                <FaFlask size={14} className="hidden sm:block" />
-              </div>
-
-              {/* Code */}
-
-              <div className="absolute -right-3 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-lg border border-blue-400/20 bg-[#08101f] text-blue-300 shadow-lg sm:-right-5 sm:h-10 sm:w-10 sm:rounded-xl">
-                <FaCode size={12} className="sm:hidden" />
-                <FaCode size={14} className="hidden sm:block" />
-              </div>
-
-              {/* Microscope */}
-
-              <div className="absolute -top-3 left-1/2 flex h-7 w-7 -translate-x-1/2 items-center justify-center rounded-lg border border-violet-400/20 bg-[#08101f] text-violet-300 shadow-lg sm:-top-5 sm:h-10 sm:w-10 sm:rounded-xl">
-                <FaMicroscope size={12} className="sm:hidden" />
-                <FaMicroscope size={14} className="hidden sm:block" />
-              </div>
             </motion.div>
 
             {/* ================================================= */}
@@ -409,9 +512,9 @@ export default function Hero() {
             {/* DECORATIVE DOTS */}
             {/* ================================================= */}
 
-            <div className="absolute left-5 top-5 h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.8)] sm:left-16 sm:top-16 sm:h-2 sm:w-2" />
+            <div className="absolute left-4 top-4 h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.8)] sm:left-16 sm:top-16 sm:h-2 sm:w-2" />
 
-            <div className="absolute bottom-5 right-5 h-1.5 w-1.5 rounded-full bg-violet-300 shadow-[0_0_12px_rgba(196,181,253,0.8)] sm:bottom-20 sm:right-20 sm:h-2 sm:w-2" />
+            <div className="absolute bottom-4 right-4 h-1.5 w-1.5 rounded-full bg-violet-300 shadow-[0_0_12px_rgba(196,181,253,0.8)] sm:bottom-20 sm:right-20 sm:h-2 sm:w-2" />
           </motion.div>
         </div>
       </Container>
@@ -422,15 +525,26 @@ export default function Hero() {
 
       <motion.a
         href="#about"
-        animate={{
-          y: [0, 6, 0],
-        }}
+        animate={{ y: [0, 6, 0] }}
         transition={{
           duration: 2,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-slate-600 transition hover:text-cyan-300 sm:flex"
+        className="
+          absolute
+          bottom-6
+          left-1/2
+          hidden
+          -translate-x-1/2
+          flex-col
+          items-center
+          gap-2
+          text-slate-600
+          transition
+          hover:text-cyan-300
+          sm:flex
+        "
       >
         <span className="text-[10px] uppercase tracking-[0.25em]">
           Scroll
