@@ -40,9 +40,9 @@ const floatingCards = [
 export default function Hero() {
   return (
     <section
-      id="home"
-      className="relative isolate w-full overflow-hidden"
-    >
+  id="home"
+  className="relative isolate w-full overflow-hidden pt-20"
+>
       {/* ================= BACKGROUND ================= */}
 
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
