@@ -85,7 +85,8 @@ export default function Navbar() {
           {/* Right */}
           <div className="flex items-center gap-3">
             <Link
-              href="/cv.pdf"
+              href="/Md_Fahim_Muntasir_Resume.pdf"
+               download="Md_Fahim_Muntasir_Resume.pdf"
               className="hidden items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-300 sm:flex"
             >
               Resume
